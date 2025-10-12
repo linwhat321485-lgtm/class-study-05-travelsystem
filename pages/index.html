@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <section class="container">
+      <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+          <div class="border-bottom border-3 border-primary-400 mb-6">
+            <h1 class="h4 text-primary-400">新增旅遊套票</h1>
+          </div>
+          <form action="" class="d-flex flex-column gap-4">
+            <div class="d-flex align-items-center">
+              <label for="ticketName" class="label-sm text-primary-400 me-5">套票名稱</label>
+              <input type="text" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketName" placeholder="請填寫圖片名稱">
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="imgLink" class="label-sm text-primary-400 me-5">圖片網址</label>
+              <input type="text" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="imgLink" placeholder="請填寫圖片網址">
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="areaSelect" class="label-sm text-primary-400 me-5">景點地區</label>
+              <select name="" id="areaSelect" class="form-select border-bottom border-primary-400 rounded-bottom-0"  aria-label="select" aria-placeholder="請選擇景點地區">
+                <option selected disabled hidden>請選擇景點地區</option>
+                <option value="taipai">台北</option>
+                <option value="taichung">台中</option>
+                <option value="Kaohsiung">高雄</option>
+              </select>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="ticketCost" class="label-sm text-primary-400 me-5">套票金額</label>
+              <input type="text" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketCost" placeholder="請填寫套票金額">
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="ticketNumber" class="label-sm text-primary-400 me-5">套票組數</label>
+              <input type="text" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketNumber" placeholder="請填寫套票組數">
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="ticketLv" class="label-sm text-primary-400 me-5">套票星級</label>
+              <input type="text" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketLv" placeholder="請填寫套票星級">
+            </div>
+            <div class="d-flex align-items-start">
+              <label for="ticketDescribe" class="label-sm text-primary-400 me-5 py-2">套票描述</label>
+              <textarea name="" id="ticketDescribe" class="form-control border-bottom border-primary-400 rounded-bottom-0" placeholder="請填寫套票描述（限 100 字）"></textarea>
+            </div>
+            <input type="submit" value="新增套票">
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="py-10 bg-main">
+      <div class="container mb-8 d-flex align-items-center">
+        <form action="" class="me-5" style="width: 306px;">
+          <div>
+            <select name="" id="localSearch" class="form-select border">
+              <option selected disabled hidden>地區搜尋</option>
+              <option value="allLocation">全部地區</option>
+              <option value="taipai">台北</option>
+              <option value="taichung">台中</option>
+              <option value="Kaohsiung">高雄</option>
+            </select>
+          </div>
+        </form>
+        <p class="text-gray-500">本次搜尋共 <span>6</span> 筆資料</p>
+      </div>
+      <section class="container">
+        <div class="row row-cols-md-3">
+          <div class="col">
+            <div class="card position-relative">
+              <span class="badge bg-primary-300 label-md rounded-end position-absolute top-0 start-0 translate-middle-y">台東</span>
+            
+              <img class="card-img-top" src="../assets/images/traval-card/travel_1.png" alt="">
+              <div class="card-header  position-relative">
+                <span class="badge bg-primary-500 fs-6 rounded-end position-absolute top-0 start-0 translate-middle-y">8.6</span>
+                <h2 class="text-primary-400 pb-1 border-bottom border-3 border-primary-400">綠島自由行套裝行程</h2>
+              </div>
+              <div class="card-body">
+                <p>
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+                </p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <span class="text-primary-500">剩下最後 8 組</span>
+                <div class="d-flex">
+                  <span class="py-3 me-1 text-primary-500">TWD</span>
+                  <span class="label-xl text-primary-500">$1,280</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

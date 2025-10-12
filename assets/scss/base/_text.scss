@@ -1,0 +1,90 @@
+// $font-size-base affects the font size of the body text
+$font-size-root:              null ;
+$font-size-base:              1rem ; // Assumes the browser default, typically `16px`
+$font-size-xs:                $font-size-base * .75 ;
+$font-size-sm:                $font-size-base * .875 ;
+$font-size-lg:                $font-size-base * 1.25 ;
+
+$font-weight-lighter:         lighter ;
+$font-weight-light:           300 ;
+$font-weight-normal:          400 ;
+$font-weight-medium:          500 ;
+$font-weight-semibold:        600 ;
+$font-weight-bold:            700 ;
+$font-weight-bolder:          bolder ;
+
+$font-weight-base:            $font-weight-normal ;
+
+$line-height-base:            1.5 ;
+$line-height-sm:              1.25 ;
+$line-height-lg:              2 ;
+
+$h1-font-size:                $font-size-base * 2.5 ;
+$h2-font-size:                $font-size-base * 2 ;
+$h3-font-size:                $font-size-base * 1.75 ;
+$h4-font-size:                $font-size-base * 1.5 ;
+$h5-font-size:                $font-size-base * 1.25 ;
+$h6-font-size:                $font-size-base ;
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) ;
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      0;
+$headings-font-family:        null ;
+$headings-font-style:         null ;
+$headings-font-weight:        700 ;
+$headings-line-height:        1.2 ;
+$headings-color:              inherit ;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+) ;
+
+$display-font-family: null ;
+$display-font-style:  null ;
+$display-font-weight: 300 ;
+$display-line-height: $headings-line-height ;
+
+$label-xl : $font-size-base *2;
+$label-lg : $font-size-base *1.5;
+$label-md : $font-size-base *1.25;
+$label-sm : $font-size-base ;
+.label-xl{
+    font-size: $label-xl !important;
+    font-weight: $font-weight-medium !important;
+    line-height: $line-height-base !important;
+}
+.label-lg{
+    font-size: $label-lg !important;
+    font-weight: $font-weight-medium !important;
+    line-height: $line-height-base !important;
+}
+.label-md{
+    font-size: $label-md !important;
+    font-weight: $font-weight-medium !important;
+    line-height: $line-height-base !important;
+}
+.label-sm{
+    font-size: $label-sm;
+    font-weight: $font-weight-medium !important;
+    line-height: $line-height-base !important;
+}
+
+$paragraph-margin-bottom:  0;
