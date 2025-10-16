@@ -1,0 +1,14 @@
+$card-spacer-y:                     $spacer * 1.5 ;
+$card-spacer-x:                     $spacer * 1.25 ;
+$card-title-spacer-y:               $spacer  !default;
+$card-title-color:  $primary-400;
+$card-border-width:  0;
+$card-border-radius:    0.25rem;
+$card-box-shadow:  0 3px 3px 0 rgba($black, .15);
+
+$card-cap-padding-y:  $card-spacer-y;
+
+$card-cap-bg:      none;
+$card-cap-color:   $primary-400;
+
+$card-color:    $gray-600;
