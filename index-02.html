@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <script type="module" crossorigin src="/class-study-05-travelsystem/assets/main-tTJcN-UZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/class-study-05-travelsystem/assets/main-CwwXKcSg.css">
+  </head>
+  <body>
+    <!-- <h1 class="header">header</h1>
+<a href="index.html">index</a>
+<a href="about.html">about</a>
+<a href="contact.html">contact</a> -->
+    <section class="container py-10">
+      <div class="row pt-9 pb-8 justify-content-center shadow-sm">
+        <div class="col-4">
+          <div>
+            <img src="/class-study-05-travelsystem/assets/main_img-CpCBbEVH.png" alt="" class="img-fluid">
+          </div>
+          <div>
+            <img src="/class-study-05-travelsystem/assets/logo-DAioPNsA.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="border-bottom border-3 border-primary-400 mb-6">
+            <h1 class="h4 text-primary-400">新增旅遊套票</h1>
+          </div>
+          <form class="d-flex flex-column gap-4 needs-validation" novalidate>
+            <div class="d-flex align-items-center">
+              <label for="ticketName" class="label-sm text-primary-400 me-5">套票名稱</label>
+              <input type="text" id="ticketName" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" placeholder="請填寫圖片名稱" required>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="imgLink" class="label-sm text-primary-400 me-5">圖片網址</label>
+              <input type="text" id="imgLink" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" placeholder="請填寫圖片網址" required>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="areaSelect" class="label-sm text-primary-400 me-5">景點地區</label>
+              <select name="" id="areaSelect" class="form-select border-bottom border-primary-400 rounded-bottom-0"  aria-label="select" aria-placeholder="請選擇景點地區" required>
+                <option selected disabled hidden>請選擇景點地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+              </select>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="ticketCost" class="label-sm text-primary-400 me-5">套票金額</label>
+              <input type="number" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketCost" placeholder="請填寫套票金額" required>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="ticketNumber" class="label-sm text-primary-400 me-5">套票組數</label>
+              <input type="number" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketNumber" placeholder="請填寫套票組數" required>
+            </div>
+            <div class="d-flex align-items-center">
+              <label for="ticketLv" class="label-sm text-primary-400 me-5">套票星級</label>
+              <input type="number" name="" class="form-control border-bottom border-primary-400 rounded-bottom-0" id="ticketLv" min="1" max="10" placeholder="請填寫套票星級" required>
+            </div>
+            <div class="d-flex align-items-start">
+              <label for="ticketDescribe" class="label-sm text-primary-400 me-5 py-2">套票描述</label>
+              <textarea name="" id="ticketDescribe" class="form-control border-bottom border-primary-400 rounded-bottom-0" placeholder="請填寫套票描述（限 100 字）" required></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <input type="submit" id="formSubmit" value="新增套票" class="btn btn-primary-400 btn-lg">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="py-10 bg-main">
+      <div class="container mb-8 d-flex align-items-center">
+        <form class="me-5" style="width: 306px;">
+          <div>
+            <select name="areaFilter" id="areaFilter" class="form-select border">
+              <option selected disabled hidden>地區搜尋</option>
+              <option value="全部地區">全部地區</option>
+              <option value="台北">台北</option>
+              <option value="台中">台中</option>
+              <option value="高雄">高雄</option>
+            </select>
+          </div>
+        </form>
+        <p class="text-gray-500">本次搜尋共 <span class="filterResult">0</span> 筆資料</p>
+      </div>
+      <section class="container">
+        <ul class="row row-cols-md-3 list-unstyled gy-4" id="tourCard">
+          <li class="col">
+            <div class="card position-relative">
+              <span class="tourArea badge bg-primary-300 label-md rounded-end-1 position-absolute top-0 start-0 translate-middle-y mt-2">台東</span>
+            
+              <img class="tourImg card-img-top" src="/class-study-05-travelsystem/assets/travel_1-jP7WML0f.png" alt="">
+              
+              <div class="card-body position-relative">
+                <span class="tourRank badge bg-primary-500 fs-6 rounded-end-1 position-absolute top-0 start-0 translate-middle-y">8.6</span>
+                <h2 class="tourName card-title h4 pb-1 border-bottom border-3 border-primary-400">綠島自由行套裝行程</h2>
+                <p class="tourDescri">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+                </p>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <p class="">剩下最後 <span class="tourGroup">8</span> 組</p>
+                <div class="d-flex">
+                  <span class="py-3 me-1">TWD</span>
+                  <span class="tourPrice label-xl ">$1,280</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <!-- <footer class="footer">footer</footer> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    <script>
+        let data ="";
+          //卡片表單
+        const ticketName = document.querySelector("#ticketName");
+        const imgLink = document.querySelector("#imgLink");
+        const areaSelect = document.querySelector("#areaSelect");
+        const ticketCost = document.querySelector("#ticketCost");
+        const ticketNumber = document.querySelector("#ticketNumber");
+        const ticketLv = document.querySelector("#ticketLv");
+        const ticketDescribe = document.querySelector("#ticketDescribe");
+        const formSubmit = document.querySelector("#formSubmit");
+          //卡片內容
+        const tourCard = document.querySelector("#tourCard");
+          //地區篩選
+        const areaFilter = document.querySelector("#areaFilter");
+        const filterResult = document.querySelector(".filterResult");
+
+
+      //AJAX-axios
+      axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelAPI-lv1.json')
+        .then(function (response) {
+            // -------------
+            //   程式開始
+            // -------------
+            //1.設定JSON的變數資料
+          data = response.data;
+             //2.建立初始化的函數----------
+          function init (selectValue){
+              //3.宣告要將forEach結果套用到DOM的變數 
+            let cardContent = "";     //卡片元件
+            let filterResultNum = 0 ; //篩選共幾筆資料
+            selectValue = areaFilter.value;
+              //4.進行forEach
+            data.forEach(function(item,index){
+                //5.設定能整合forEach結果的變數
+              let content = 
+              `<li class="col">
+                <div class="card h-100 position-relative">
+                    <span class="tourArea badge bg-primary-300 label-md rounded-end-1 position-absolute top-0 start-0 translate-middle-y mt-2">${item.area}</span>
+                
+                    <img class="tourImg card-img-top" src="${item.imgUrl}" alt="">
+                    
+                    <div class="card-body position-relative">
+                    <span class="tourRank badge bg-primary-500 fs-6 rounded-end-1 position-absolute top-0 start-0 translate-middle-y">${item.rate}</span>
+                    <h2 class="tourName card-title h4 pb-1 border-bottom border-3 border-primary-400">${item.name}</h2>
+                    <p class="tourDescri">
+                        ${item.description}
+                    </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                    <p class="">剩下最後 <span class="tourGroup">${item.group}</span> 組</p>
+                    <div class="d-flex">
+                        <span class="py-3 me-1">TWD</span>
+                        <span class="tourPrice label-xl ">${item.price}</span>
+                    </div>
+                    </div>
+                </div>
+             </li>`
+             //6.將結果傳至DOM，並innerHTML / textContent導出
+             cardContent += content;
+             tourCard.innerHTML = cardContent;
+             filterResultNum ++;
+             filterResult.textContent = filterResultNum
+              console.log(filterResultNum);
+          })}
+          //7.運行初始化函式
+          init();
+
+          //建立篩選器的監聽事件
+          areaFilter.addEventListener("change",function(e){
+            //1.宣告要將forEach結果套用到DOM的變數 
+            let cardContent = "";     //卡片元件
+            let filterResultNum = 0 ; //篩選共幾筆資料
+            //2.除錯:操作到非正確選項鑿中斷程式
+            if (e.target.value == undefined) {
+              console.log("nothing!");
+              return;
+            }
+            //3.一樣也跑forEach
+            data.forEach(function(item,index){
+              //4.設定能整合forEach結果的變數
+              let content = 
+                `<li class="col">
+                  <div class="card h-100 position-relative">
+                      <span class="tourArea badge bg-primary-300 label-md rounded-end-1 position-absolute top-0 start-0 translate-middle-y mt-2">${item.area}</span>
+                  
+                      <img class="tourImg card-img-top" src="${item.imgUrl}" alt="">
+                      
+                      <div class="card-body position-relative">
+                      <span class="tourRank badge bg-primary-500 fs-6 rounded-end-1 position-absolute top-0 start-0 translate-middle-y">${item.rate}</span>
+                      <h2 class="tourName card-title h4 pb-1 border-bottom border-3 border-primary-400">${item.name}</h2>
+                      <p class="tourDescri">
+                          ${item.description}
+                      </p>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                      <p class="">剩下最後 <span class="tourGroup">${item.group}</span> 組</p>
+                      <div class="d-flex">
+                          <span class="py-3 me-1">TWD</span>
+                          <span class="tourPrice label-xl ">${item.price}</span>
+                      </div>
+                      </div>
+                  </div>
+                </li>`
+                //5.建立條件式，選出符合選項的內容
+              if(e.target.value == item.area){
+                cardContent += content;
+                filterResultNum ++ ;
+                console.log(e.target.value,item.area);
+                
+              }else if(e.target.value == "全部地區"){ //6.還原到預設:顯示全部內容
+                console.log("ALL");
+                cardContent += content;
+                filterResultNum ++ ;
+              }
+              //  console.log(content);
+            })
+            //7.將結果傳至DOM
+            tourCard.innerHTML = cardContent;
+            filterResult.textContent = filterResultNum;
+          })
+          //表單邏輯
+          formSubmit.addEventListener("click",function(e){
+            e.preventDefault();
+            let formObj = {
+              "id": data.length,
+              "name": ticketName.value,
+              "imgUrl": imgLink.value,
+              "area": areaSelect.value,
+              "description": ticketDescribe.value,
+              "group": ticketNumber.value,
+              "price": ticketCost.value,
+              "rate": ticketLv.value
+            }
+            data.push(formObj);
+            console.log("click!");
+            init("全部地區");
+          })
+      //AJAX done
+      });
+      
+        
+
+      // document.addEventListener("DOMContentLoaded",function(){
+
+          
+      //   // function init(filterArea = "全部地區"){
+      //     let cardContent = "";
+      //     let filterResultNum = 0;
+      //     data.forEach(function(item,index){
+      //       let content =
+            
+      //       cardContent += content;
+      //       filterResultNum ++ ;
+      //       // console.log(item,index);
+      //     })
+      //     tourCard.innerHTML = cardContent;
+      //     filterResult.textContent = filterResultNum;
+      //   };
+        
+
+          //地區篩選----------
+        // areaFilter.addEventListener("change",function (e) {
+        //   let cardContent = ""; //將既有的內容清空初始化
+        //   let filterResultNum = 0;
+        //   if (e.target.value == undefined) {
+        //     console.log("nothing!");
+        //     return;
+        //   }
+        //   data.forEach(function(item){
+        //     let content =
+        //       `<li class="col">
+        //           <div class="card h-100 position-relative">
+        //               <span class="tourArea badge bg-primary-300 label-md rounded-end-1 position-absolute top-0 start-0 translate-middle-y mt-2">${item.area}</span>
+                  
+        //               <img class="tourImg card-img-top" src="${item.imgUrl}" alt="">
+                      
+        //               <div class="card-body position-relative">
+        //               <span class="tourRank badge bg-primary-500 fs-6 rounded-end-1 position-absolute top-0 start-0 translate-middle-y">${item.rate}</span>
+        //               <h2 class="tourName card-title h4 pb-1 border-bottom border-3 border-primary-400">${item.name}</h2>
+        //               <p class="tourDescri">
+        //                   ${item.description}
+        //               </p>
+        //               </div>
+        //               <div class="card-footer d-flex justify-content-between align-items-center">
+        //               <p class="">剩下最後 <span class="tourGroup">${item.group}</span> 組</p>
+        //               <div class="d-flex">
+        //                   <span class="py-3 me-1">TWD</span>
+        //                   <span class="tourPrice label-xl ">${item.price}</span>
+        //               </div>
+        //               </div>
+        //           </div>
+        //       </li>`
+            
+        //     if(e.target.value == item.area){
+        //       cardContent += content;
+        //       filterResultNum ++ ;
+        //       console.log(e.target.value,item.area);
+              
+        //     }else if(e.target.value == "全部地區"){
+        //       console.log("ALL");
+        //       cardContent += content;
+        //       filterResultNum ++ ;
+        //     }
+        //   })
+        //   tourCard.innerHTML = cardContent;
+        //   filterResult.textContent = filterResultNum;
+        // })
+        
+        //   //卡片表單邏輯----------
+        // formSubmit.addEventListener("click",function(e){
+        //   e.preventDefault();
+        //   let formObj = {
+        //     "id": data.length,
+        //     "name": ticketName.value,
+        //     "imgUrl": imgLink.value,
+        //     "area": areaSelect.value,
+        //     "description": ticketDescribe.value,
+        //     "group": ticketNumber.value,
+        //     "price": ticketCost.value,
+        //     "rate": ticketLv.value
+        //   }
+        //   console.log(formObj);
+        //   data.push(formObj);
+        //   console.log("data 陣列新增後的長度:", data.length);
+        //   init("全部地區");
+        // })
+
+      // })
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科技風品牌官網主頁</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400&display=swap');
+
+        :root {
+            --soft-violet: #C299FF;
+            --neon-pink: #FF66CC;
+            --pulse-cyan: #00FFFF;
+            --future-white: #FFFFFF;
+            --galaxy-grey: #E0E0E0;
+            --deep-dark: #0A0A0A; /* 比純黑稍亮一點，增加層次 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--deep-dark);
+            color: var(--future-white);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden; /* 防止內容溢出 */
+            position: relative;
+        }
+
+        /* 能量核心/傳送門效果 */
+
+        .energy-core {
+            position: absolute;
+            width: 40vw; /* 寬度為視窗寬度的百分比 */
+            height: 25vw; /* 高度為視窗寬度的百分比 */
+            background: radial-gradient(circle at center,
+                        var(--neon-pink) 0%,
+                        var(--soft-violet) 30%,
+                        transparent 70%);
+            /* 模擬菱形或星形光束 */
+            transform: rotate(45deg) skewX(20deg) scale(1.2); /* 旋轉+傾斜+放大 */
+            filter: blur(80px); /* 大量模糊產生光暈效果 */
+            opacity: 0.6;
+            animation: pulse-glow 5s infinite alternate ease-in-out; /* 光暈呼吸動畫 */
+            z-index: 0; /* 確保在背景，文字之下 */
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: rotate(45deg) skewX(20deg) scale(1.2) translateY(0px); opacity: 0.6; }
+            50% { transform: rotate(45deg) skewX(20deg) scale(1.3) translateY(-5px); opacity: 0.8; }
+            100% { transform: rotate(45deg) skewX(20deg) scale(1.2) translateY(0px); opacity: 0.6; }
+        }
+
+        /* 主標題 */
+
+        .main-heading {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5em, 5vw, 4.5em); /* RWD 字體大小 */
+            font-weight: 700;
+            color: var(--future-white);
+            text-transform: uppercase;
+            text-shadow: 0 0 10px var(--pulse-cyan), 0 0 20px var(--pulse-cyan); /* 光邊效果 */
+            margin-bottom: 0.5em;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1; /* 確保在光束之上 */
+        }
+
+        /* 副標題 */
+
+        .sub-heading {
+            font-size: clamp(1em, 2vw, 1.5em);
+            color: var(--galaxy-grey);
+            margin-bottom: 1.5em;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        /* 內文 */
+
+        .description {
+            font-size: clamp(0.8em, 1.5vw, 1.1em);
+            color: var(--galaxy-grey);
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 3em;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 行動呼籲按鈕 */
+
+        .call-to-action-button {
+            background: linear-gradient(45deg, var(--neon-pink), var(--soft-violet));
+            color: var(--future-white);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1.2em 2.5em;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%); /* 六邊形形狀 */
+            box-shadow: 0 0 15px var(--neon-pink); /* 初始發光 */
+        }
+
+        .call-to-action-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 25px var(--neon-pink), 0 0 40px var(--pulse-cyan); /* HOVER 時更強烈的發光 */
+        }
+
+        /* 響應式設計 */
+
+        @media (max-width: 768px) {
+            .energy-core {
+                width: 60vw;
+                height: 40vw;
+            }
+            .main-heading {
+                font-size: 2.2em;
+            }
+            .sub-heading {
+                font-size: 0.9em;
+            }
+            .description {
+                font-size: 0.8em;
+                max-width: 90%;
+            }
+            .call-to-action-button {
+                padding: 1em 2em;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="energy-core"></div> <h1 class="main-heading">UNLOCK THE FUTURE</h1>
+    <p class="sub-heading">Innovate. Create. Transcend.</p>
+    <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+    </p>
+    <button class="call-to-action-button">JOIN THE ODYSSEY</button>
+
+</body>
+</html>
