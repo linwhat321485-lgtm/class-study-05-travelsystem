@@ -10,10 +10,6 @@
     <link rel="stylesheet" crossorigin href="/class-study-05-travelsystem/assets/main-CwwXKcSg.css">
   </head>
   <body>
-    <!-- <h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a> -->
     <section class="container py-10">
       <div class="row pt-9 pb-8 justify-content-center shadow-sm">
         <div class="col-4">
@@ -125,22 +121,26 @@
       </div>
     </section>
     <section class="py-10 bg-main">
-      <div class="container mb-8 d-flex">
-        <div class=" d-flex align-items-center">
-          <form class="me-5" style="width: 306px;">
-            <div>
-              <select name="areaFilter" id="areaFilter" class="form-select border">
-                <option selected disabled hidden>地區搜尋</option>
-                <option value="全部地區">全部地區</option>
-                <option value="台北">台北</option>
-                <option value="台中">台中</option>
-                <option value="高雄">高雄</option>
-              </select>
-            </div>
-          </form>
-          <p class="text-gray-500">本次搜尋共 <span class="filterResult">0</span> 筆資料</p>
+      <div class="container mb-8">
+        <div class="row align-items-start">
+          <div class="col-10 d-flex align-items-center">
+            <form class="me-5" style="width: 306px;">
+              <div>
+                <select name="areaFilter" id="areaFilter" class="form-select border">
+                  <option selected disabled hidden>地區搜尋</option>
+                  <option value="全部地區">全部地區</option>
+                  <option value="台北">台北</option>
+                  <option value="台中">台中</option>
+                  <option value="高雄">高雄</option>
+                </select>
+              </div>
+            </form>
+            <p class="text-gray-500">本次搜尋共 <span class="filterResult">0</span> 筆資料</p>
+          </div>
+          <div class="col-2">
+            <div id="chart"></div>
+          </div>
         </div>
-        <div id="chart"></div>
       </div>
       <section class="container">
         <ul class="row row-cols-md-3 list-unstyled gy-4" id="tourCard">
@@ -148,7 +148,6 @@
         </ul>
       </section>
     </section>
-    <!-- <footer class="footer">footer</footer> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js">
     </script>
@@ -356,7 +355,8 @@
         }
         },
         donut: {
-          title: "旅遊地區"
+          title: "旅遊地區",
+          
         }
       });
 
